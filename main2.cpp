@@ -31,8 +31,7 @@ int main(int argc, char **argv)
                 char top = s.pop();
 
 
-                if ((c == ']' && top != '[') ||
-                    (c == '}' && top != '{')) 
+                if ((c == ']' && top != '[') || (c == '}' && top != '{')) 
                 {
                     ok = false;
                     break;
