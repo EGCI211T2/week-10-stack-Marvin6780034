@@ -26,21 +26,21 @@ void Stack::push(int x){
     
 }
 
-int Stack::pop(){
-        NodePtr t=top;
-        int value;
-        value=t->get_value();
-    // Left missing part for exercises
-    
-        --size;
-        delete t;
-        return value;
-	
-        //be careful of the empty stack!!!
-
-    cout << "Empty Stack" << endl;
-    return 0;
+int Stack::pop() 
+{
+    if (top == NULL)
+    {  
+        return 0;             
     }
+    NodePtr t = top;
+    int value = t->get_value();
+    top = top->get_next();
+    size--;
+
+    delete t;
+    return value;
+}
+
 
 Stack::Stack()
 {
